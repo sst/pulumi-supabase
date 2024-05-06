@@ -21,3 +21,5 @@ provider/**/schema-embed.json
 **/version.txt
 **/nuget
 **/dist
+sdk/
+provider/cmd/pulumi-resource-supabase/schema.json

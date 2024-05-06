@@ -54,9 +54,9 @@ From the templated repository:
    This will do the following:
    - rename folders in `provider/cmd` to `pulumi-resource-foo` and `pulumi-tfgen-foo`
    - replace dependencies in `provider/go.mod` to reflect your repository name
-   - find and replace all instances of the boilerplate `xyz` with the `NAME` of your provider.
-   - find and replace all instances of the boilerplate `abc` with the `ORG` of your provider.
-   - replace all instances of the `github.com/pulumi/pulumi-xyz` repository with the `REPOSITORY` location
+   - find and replace all instances of the boilerplate `supabase` with the `NAME` of your provider.
+   - find and replace all instances of the boilerplate `sst-provider` with the `ORG` of your provider.
+   - replace all instances of the `github.com/sst/pulumi-supabase` repository with the `REPOSITORY` location
 
    Note for third-party providers:
    - If you intend to publish on the Pulumi registry you will want to update the `DisplayName`, `Publisher`, and `Homepage` values in `provider/resources.go` to use your desired casing.
@@ -357,7 +357,7 @@ before:
   hooks:
   - make tfgen
 builds:
-- binary: pulumi-resource-xyz
+- binary: pulumi-resource-supabase
   dir: provider
   goarch:
   - amd64
@@ -368,8 +368,8 @@ builds:
   - linux
   ignore: []
   ldflags:
-  - -X github.com/pulumi/pulumi-xyz/provider/pkg/version.Version={{.Tag}}
-  main: ./cmd/pulumi-resource-xyz/
+  - -X github.com/sst/pulumi-supabase/provider/pkg/version.Version={{.Tag}}
+  main: ./cmd/pulumi-resource-supabase/
   sort: asc
   use: git
 release:
@@ -394,18 +394,18 @@ dist
 ├── artifacts.json
 ├── config.yaml
 ├── metadata.json
-├── pulumi-xyz_darwin_amd64_v1
-│   └── pulumi-resource-xyz
-├── pulumi-xyz_darwin_arm64
-│   └── pulumi-resource-xyz
-├── pulumi-xyz_linux_amd64_v1
-│   └── pulumi-resource-xyz
-├── pulumi-xyz_linux_arm64
-│   └── pulumi-resource-xyz
-├── pulumi-xyz_windows_amd64_v1
-│   └── pulumi-resource-xyz.exe
-└── pulumi-xyz_windows_arm64
-    └── pulumi-resource-xyz.exe
+├── pulumi-supabase_darwin_amd64_v1
+│   └── pulumi-resource-supabase
+├── pulumi-supabase_darwin_arm64
+│   └── pulumi-resource-supabase
+├── pulumi-supabase_linux_amd64_v1
+│   └── pulumi-resource-supabase
+├── pulumi-supabase_linux_arm64
+│   └── pulumi-resource-supabase
+├── pulumi-supabase_windows_amd64_v1
+│   └── pulumi-resource-supabase.exe
+└── pulumi-supabase_windows_arm64
+    └── pulumi-resource-supabase.exe
 ```
 
 Any of the provider binaries can be used to target the correct machine architecture

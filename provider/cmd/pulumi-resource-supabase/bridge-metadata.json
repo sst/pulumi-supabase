@@ -1,0 +1,29 @@
+{
+    "auto-aliasing": {
+        "resources": {
+            "supabase_branch": {
+                "current": "supabase:index/branch:Branch"
+            },
+            "supabase_project": {
+                "current": "supabase:index/project:Project"
+            },
+            "supabase_settings": {
+                "current": "supabase:index/settings:Settings"
+            }
+        },
+        "datasources": {
+            "supabase_branch": {
+                "current": "supabase:index/getBranch:getBranch",
+                "fields": {
+                    "branches": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "supabase_pooler": {
+                "current": "supabase:index/getPooler:getPooler"
+            }
+        }
+    },
+    "auto-settings": {}
+}

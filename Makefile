@@ -1,9 +1,9 @@
-PROJECT_NAME := xyz Package
+PROJECT_NAME := supabase Package
 
 SHELL            := /bin/bash
-PACK             := xyz
-PROJECT          := github.com/pulumi/pulumi-xyz
-NODE_MODULE_NAME := @abc/${PACK}
+PACK             := supabase
+PROJECT          := github.com/sst/pulumi-supabase
+NODE_MODULE_NAME := @sst-provider/${PACK}
 TF_NAME          := ${PACK}
 PROVIDER_PATH    := provider
 VERSION_PATH     := ${PROVIDER_PATH}/pkg/version.Version

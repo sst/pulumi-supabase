@@ -15,12 +15,18 @@
 package main
 
 import (
-	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
-	xyz "github.com/pulumi/pulumi-xyz/provider"
-	"github.com/pulumi/pulumi-xyz/provider/pkg/version"
+	"context"
+	_ "embed"
+
+	"github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
+	supabase "github.com/sst/pulumi-supabase/provider"
 )
+
+//go:embed schema.json
+var pulumiSchema []byte
 
 func main() {
 	// Modify the path to point to the new provider
-	tfgen.Main("xyz", version.Version, xyz.Provider())
+	tfbridge.Main(context.Background(), "supabase", supabase.Provider(),
+		tfbridge.ProviderMetadata{PackageSchema: pulumiSchema})
 }
