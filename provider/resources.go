@@ -125,12 +125,12 @@ func Provider() tfbridge.ProviderInfo {
 		// PluginDownloadURL is an optional URL used to download the Provider
 		// for use in Pulumi programs
 		// e.g https://github.com/org/pulumi-provider-name/releases/
-		PluginDownloadURL: "",
+		PluginDownloadURL: "github://api.github.com/sst",
 		Description:       "A Pulumi package for creating and managing supabase cloud resources.",
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
 		// https://www.pulumi.com/docs/guides/pulumi-packages/schema/#package.
-		Keywords:   []string{"sst-provider", "supabase", "category/cloud"},
+		Keywords:   []string{"sst", "supabase", "category/cloud"},
 		License:    "Apache-2.0",
 		Homepage:   "https://www.pulumi.com",
 		Repository: "https://github.com/sst/pulumi-supabase",
